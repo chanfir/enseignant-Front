@@ -1,0 +1,46 @@
+<p>enseignants-ajouter works!</p>
+
+<form>
+
+    <div class="form-group">
+        <label for="nf-email">Email</label>
+        <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Entrer Email.." >
+      </div>
+      <div class="form-group">
+        <label for="nf-email">Nom</label>
+        <input type="text" id="nf-email" name="nf-email" class="form-control" placeholder="Entrer Nom.." >
+      </div>
+      <div class="form-group">
+        <label for="nf-email">Prenom</label>
+        <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Entrer Prenom.." >
+      </div>
+     
+      <div class="form-group">
+        <label for="nf-password">Password</label>
+        <input type="password" id="nf-password" name="nf-password" class="form-control" placeholder="Enter Password.." >
+      </div>
+ 
+      <div class="form-group row">
+        <label class="col-md-3 col-form-label">Type</label>
+        
+        <div for=" Option" *ngFor="let mc of ChooseCriteria" class="col-md-9 col-form-label">
+          <div class="form-check form-check-inline mr-1">
+            <input class="form-check-input" type="checkbox" (change)="onChange(mc)" [checked]="mc.isSelected"   id="inline-checkbox1" value="{{mc}}">
+            <label class="form-check-label" for="inline-checkbox1"> {{ mc.category }}</label>
+          </div>
+         <!--  <div class="form-check form-check-inline mr-1">
+            <input class="form-check-input" type="checkbox" id="inline-checkbox2" value="pricipale">
+            <label class="form-check-label" for="inline-checkbox2">principale</label>
+          </div>
+          <div class="form-check form-check-inline mr-1">
+            <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="Formateur">
+            <label class="form-check-label" for="inline-checkbox3">Formateur</label>
+          </div>
+          <div class="form-check form-check-inline mr-1">
+            <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="maitre assistnat">
+            <label class="form-check-label" for="inline-checkbox3">maitre assistant</label>
+          </div> -->
+        </div>
+      </div>
+
+</form>
